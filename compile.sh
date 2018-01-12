@@ -2,10 +2,10 @@
 
 src=$1
 if [ "$src" = "nsc" ]; then
-        source $HOME/setupnscruby;
+        source /home/nscuser/setupnscruby;
 else
-        source $HOME/setupruby;
+        source /home/nscuser/setupruby;
 fi
-cd $HOME/mnt;
+cd /home/nscuser/mnt;
 jekyll build;
 exit $?;
