@@ -16,5 +16,3 @@ RUN cp setupnscruby ..
 RUN cp setupruby ..
 WORKDIR /home/nscuser
 ENTRYPOINT /bin/bash
-
-

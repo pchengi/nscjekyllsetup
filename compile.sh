@@ -6,6 +6,6 @@ if [ "$src" = "nsc" ]; then
 else
         source $HOME/setupruby;
 fi
-cd /mnt;
+cd $HOME/mnt;
 jekyll build;
 exit $?;
