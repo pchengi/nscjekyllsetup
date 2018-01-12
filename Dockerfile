@@ -7,7 +7,7 @@ RUN mkdir -p /home/nscuser/mnt
 WORKDIR /home/nscuser
 RUN git clone https://github.com/snic-nsc/nscjekyllsetup.git
 WORKDIR /home/nscuser/nscjekyllsetup
-RUN su - c 'bash presetup.sh'
+RUN su -c 'bash presetup.sh' nscuser
 RUN chown -R nscuser:nscuser /home/nscuser
 USER nscuser
 WORKDIR /home/nscuser/nscjekyllsetup
