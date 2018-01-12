@@ -1,6 +1,6 @@
 FROM debian
 
-RUN apt-get update && apt-get install -y git wget gcc make libssl-dev libreadline-dev zlib1g-dev vim bzip2 locales pandoc
+RUN apt-get update && apt-get install -y git wget gcc make libssl-dev libreadline-dev zlib1g-dev vim bzip2 locales pandoc python2.7
 RUN useradd nscuser --shell /bin/bash
 RUN mkdir -p /home/nscuser/mnt
 WORKDIR /home/nscuser
