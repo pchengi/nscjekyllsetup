@@ -2,7 +2,7 @@ FROM debian
 
 RUN apt-get update
 RUN apt-get install -y git wget gcc make libssl-dev libreadline-dev zlib1g-dev vim bzip2 locales
-RUN useradd nscuser
+RUN useradd nscuser --shell /bin/bash
 RUN mkdir -p /home/nscuser/mnt
 WORKDIR /home/nscuser
 RUN git clone https://github.com/snic-nsc/nscjekyllsetup.git
