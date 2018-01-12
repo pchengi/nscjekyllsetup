@@ -7,6 +7,7 @@ popd
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 pushd ~/.rbenv/plugins/ruby-build
 git checkout 476d09b66a14392989c3c65793428742e1d9f951
+PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 rbenv install 2.4.1
 rbenv global 2.4.1
