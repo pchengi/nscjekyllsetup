@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export LANG=en_US.UTF-8
 src=$1
 if [ "$src" = "nsc" ]; then
         source /home/nscuser/setupnscruby;
