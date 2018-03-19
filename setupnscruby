@@ -1,3 +1,0 @@
-export PATH="/home/nscuser/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-rbenv global 2.4.1
