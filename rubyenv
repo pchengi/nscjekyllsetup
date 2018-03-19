@@ -3,4 +3,3 @@ if [ "$1" = "nsc" ]; then
 else
     export PATH=/usr/local/src/rbenv/bin:/usr/local/src/rbenv/versions/2.4.0/bin:$PATH
 fi
-cd /mnt
