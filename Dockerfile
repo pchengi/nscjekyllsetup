@@ -5,7 +5,7 @@ RUN useradd nscuser --shell /bin/bash
 WORKDIR /usr/local/src
 RUN git clone https://github.com/snic-nsc/nscjekyllsetup.git
 WORKDIR /usr/local/src/nscjekyllsetup
-RUN git checkout 'v1.05'
+RUN git checkout 'v1.06'
 RUN bash presetup.sh
 RUN bash setup.sh
 USER nscuser
