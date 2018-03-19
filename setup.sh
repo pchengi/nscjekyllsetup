@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /usr/local/local/src
+cd /usr/local/src
 git clone https://github.com/sstephenson/rbenv.git rbenv
 pushd rbenv
 git checkout 615f8443fe947f114fb358815b50978f6ab1881c
