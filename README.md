@@ -86,3 +86,8 @@ source /usr/local/src/nscjekyllsetup/rubyenv nsc
 cd <checked-out nscweb directory>
 jekyll serve --watch
 ```
+
+## Converting Docker to Singularity
+
+- If you don't wish to build a singularity container from scratch, using the recipe, you can convert it from a prebuilt docker image.
+- To do this, execute the build.sh script in docker-to-singularity folder, under `singularity'.
