@@ -6,7 +6,7 @@ RUN mkdir -p /home/nscuser
 WORKDIR /home/nscuser
 RUN git clone https://github.com/snic-nsc/nscjekyllsetup.git
 WORKDIR /home/nscuser/nscjekyllsetup
-RUN git checkout 'v1.02'
+RUN git checkout 'v1.03'
 RUN bash presetup.sh
 RUN chown -R nscuser:nscuser /home/nscuser
 USER nscuser
