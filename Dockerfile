@@ -2,14 +2,17 @@ FROM debian
 
 RUN apt-get update && apt-get install -y git wget gcc make libssl-dev libreadline-dev zlib1g-dev vim bzip2 locales pandoc python2.7
 RUN useradd nscuser --shell /bin/bash
-WORKDIR /usr/local/src
+RUN mkdir -p /home/nscuser
+WORKDIR /home/nscuser
 RUN git clone https://github.com/snic-nsc/nscjekyllsetup.git
-WORKDIR /usr/local/src/nscjekyllsetup
-RUN git checkout 'v1.01'
+WORKDIR /home/nscuser/nscjekyllsetup
+RUN git checkout 'v1.02'
 RUN bash presetup.sh
-RUN chown -R nscuser:nscuser /usr/local/src
+RUN chown -R nscuser:nscuser /home/nscuser
 USER nscuser
-WORKDIR /usr/local/src/nscjekyllsetup
+WORKDIR /home/nscuser/nscjekyllsetup
 RUN bash setup.sh
-WORKDIR /usr/local/src
+USER root
+RUN bash postsetup.sh
+WORKDIR /usr/local/src/nscjekyllsetup
 ENTRYPOINT /bin/bash
