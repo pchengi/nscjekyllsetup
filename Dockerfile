@@ -6,13 +6,13 @@ RUN mkdir -p /home/nscuser/mnt
 WORKDIR /home/nscuser
 RUN git clone https://github.com/snic-nsc/nscjekyllsetup.git
 WORKDIR /home/nscuser/nscjekyllsetup
+RUN git checkout 'v1.02'
 RUN bash presetup.sh
 RUN chown -R nscuser:nscuser /home/nscuser
 USER nscuser
 WORKDIR /home/nscuser/nscjekyllsetup
 RUN bash setup.sh
-RUN cp compile.sh ..
-RUN cp setupnscruby ..
-RUN cp setupruby ..
-WORKDIR /home/nscuser
+USER root
+RUN bash postsetup.sh
+WORKDIR /usr/local/src/nscjekyllsetup
 ENTRYPOINT /bin/bash

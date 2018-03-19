@@ -1,5 +1,4 @@
 #!/bin/bash
-source /home/nscuser/singenv $1
-cd /mnt;
+source /usr/local/src/nscjekyllsetup/rubyenv $1
 jekyll build;
 exit $?;
