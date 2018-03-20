@@ -1,2 +1,2 @@
 Bootstrap: docker
-From: pchengi/nscjekyll:v1.11
+From: pchengi/nscjekyll:v1.12

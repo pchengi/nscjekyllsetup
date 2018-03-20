@@ -68,13 +68,13 @@ sudo singularity build nscjekyll.simg Singularity
 
 - To simply compile pages (such as via a script)
 ```
-singularity exec --bind <checked-out nscweb directory>:/mnt nscjekyll.simg bash /usr/local/src/nscjekyllsetup/compile.sh nsc
+singularity exec --bind <checked-out nscweb directory>:/mnt nscjekyll.simg bash /opt/nscjekyllsetup/compile.sh nsc
 ```
 
 - Run the jekyll web server, to serve pages, you could do one of the following:
 ```
 singularity exec --bind <checked-out nscweb directory>:/mnt nscjekyll.simg bash
-source /usr/local/src/nscjekyllsetup/rubyenv nsc
+source /opt/nscjekyllsetup/rubyenv nsc
 cd /mnt
 jekyll serve --watch
 ```
@@ -82,7 +82,7 @@ jekyll serve --watch
 or   
 ```
 singularity shell nscjekyll.simg
-source /usr/local/src/nscjekyllsetup/rubyenv nsc
+source /opt/nscjekyllsetup/rubyenv nsc
 cd <checked-out nscweb directory>
 jekyll serve --watch
 ```

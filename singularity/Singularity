@@ -3,8 +3,8 @@ From: debian
 
 %post
     apt-get update && apt-get install -y git wget gcc make libssl-dev libreadline-dev zlib1g-dev vim bzip2 locales pandoc python2.7
-    mkdir -p /usr/local/src && cd /usr/local/src
+    mkdir -p /opt && cd /opt
     git clone https://github.com/snic-nsc/nscjekyllsetup.git
-    cd nscjekyllsetup && git checkout 'v1.11'
+    cd nscjekyllsetup && git checkout 'v1.12'
     bash presetup.sh
     bash setup.sh
