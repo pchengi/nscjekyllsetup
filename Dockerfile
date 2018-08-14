@@ -1,13 +1,15 @@
-FROM debian
+FROM centos:latest
 
-RUN apt-get update && apt-get install -y git wget gcc make libssl-dev libreadline-dev zlib1g-dev vim bzip2 locales pandoc python2.7
+RUN yum install -y git wget gcc make openssl-devel readline-devel zlib-devel vim bzip2
+RUN yum install -y epel-release
+RUN yum install -y pandoc
 RUN useradd nscuser -M --shell /bin/bash
-WORKDIR /opt
+WORKDIR /usr/local/src
 RUN git clone https://github.com/snic-nsc/nscjekyllsetup.git
-WORKDIR /opt/nscjekyllsetup
-RUN git checkout 'v1.12'
+WORKDIR /usr/local/src/nscjekyllsetup
+RUN git checkout 'v1.16'
 RUN bash presetup.sh
 RUN bash setup.sh
 USER nscuser
-WORKDIR /opt/nscjekyllsetup
+WORKDIR /usr/local/src/nscjekyllsetup
 ENTRYPOINT /bin/bash

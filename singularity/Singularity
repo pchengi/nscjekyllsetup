@@ -1,10 +1,12 @@
 Bootstrap: docker
-From: debian
+From: centos:latest
 
 %post
-    apt-get update && apt-get install -y git wget gcc make libssl-dev libreadline-dev zlib1g-dev vim bzip2 locales pandoc python2.7
+    yum install -y git wget gcc make openssl-devel readline-devel zlib-devel vim bzip2
+    yum install -y epel-release
+    yum install -y pandoc
     mkdir -p /usr/local/src && cd /usr/local/src
     git clone https://github.com/snic-nsc/nscjekyllsetup.git
-    cd nscjekyllsetup && git checkout 'v1.14'
+    cd nscjekyllsetup && git checkout 'v1.16'
     bash presetup.sh
     bash setup.sh
