@@ -7,6 +7,6 @@ From: centos:latest
     yum install -y pandoc
     mkdir -p /usr/local/src && cd /usr/local/src
     git clone https://github.com/snic-nsc/nscjekyllsetup.git
-    cd nscjekyllsetup && git checkout 'v1.16'
+    cd nscjekyllsetup && git checkout 'v1.17'
     bash presetup.sh
     bash setup.sh
