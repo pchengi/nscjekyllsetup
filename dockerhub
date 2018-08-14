@@ -1,0 +1,4 @@
+sudo docker tag 8f77d3f4dc1d pchengi/nscjekyll:v1.17 # to tag an existing image under a repo.
+sudo docker login #login to configured repo
+sudo docker tag 8f77d3f4dc1d pchengi/nscjekyll:latest # to update the latest tag
+sudo docker push pchengi/nscjekyll:latest #push latest tag to remote repo
